@@ -112,7 +112,7 @@ class _LoginState extends State<Login> {
                               if (emailController.text.trim() ==
                                       "email@email.com" &&
                                   senhaController.text.trim() == "123456") {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => const Home()));
@@ -129,7 +129,7 @@ class _LoginState extends State<Login> {
                                         borderRadius:
                                             BorderRadius.circular(10))),
                                 backgroundColor: MaterialStateProperty.all(
-                                    const Color.fromARGB(255, 135, 6, 209))),
+                                    const Color.fromARGB(255, 103, 58, 183))),
                             child: const Text("ENTRAR",
                                 style: TextStyle(
                                     color: Colors.white,
