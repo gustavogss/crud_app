@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:crud_app/pages/home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -15,7 +16,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 59, 58, 58),
+        backgroundColor: const Color.fromARGB(255, 59, 58, 58),
         body: SizedBox(
           width: double.infinity,
           child: SingleChildScrollView(
@@ -111,10 +112,10 @@ class _LoginState extends State<Login> {
                               if (emailController.text.trim() ==
                                       "email@email.com" &&
                                   senhaController.text.trim() == "123456") {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text(
-                                            "Login realizado com sucesso!")));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Home()));
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
